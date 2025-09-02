@@ -1,12 +1,14 @@
-import java.util.scanner;
+import java.util.Scanner;
 
 public class condisionales {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
+
         System.out.print("Ingrese un número: ");
-        int numero = scanner.nextInt();
-        System.out.println("ingrese otro numero: ");
-        int numero_2 = scanner.nextInt();
+        int numero = input.nextInt();
+
+        System.out.print("Ingrese otro número: ");
+        int numero_2 = input.nextInt();
 
         if (numero > numero_2) {
             System.out.println("El primer numero es el mayor");
@@ -14,7 +16,17 @@ public class condisionales {
             System.out.println("El primer numero es el mas pequeño");
         } else {
             System.out.println("Los numeros son iguales");
+             
         }
+
+        input.close();
+        /*
+         * ejecutar en la terminal de manera manual con los 
+         * comandos "java -cp (inserte el nombre de la clase
+         * precedida del nombre de la carpeta)" de manera que el
+         * scanner funcione correctamente.
+         */
+    }
 
 
 }
