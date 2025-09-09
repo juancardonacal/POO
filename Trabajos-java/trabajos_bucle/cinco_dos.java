@@ -1,35 +1,36 @@
 import java.util.Scanner;
 
-public class DiasDelMes {
+public class cinco_dos {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
         System.out.println("Ingresa el nombre de un mes");
-        String mes = scanner.nextLine().toLowerCase();
+        String mes = input.nextLine().toLowerCase();
 
-        System.out.println("¿Es el año bisiesto? (true/false):");
-        boolean esBisiesto = scanner.nextBoolean();
+        System.out.println("¿Es año bisiesto? (true/false):");
+        boolean bisiesto = input.nextBoolean();
 
-        int numeroDeDias = 0;
+        int numerodias = 0;
 
         if (mes.equals("enero") || mes.equals("marzo") || mes.equals("mayo") || mes.equals("julio") || mes.equals("agosto") || mes.equals("octubre") || mes.equals("diciembre")) {
-            numeroDeDias = 31;
+            numerodias = 31;
         } else if (mes.equals("abril") || mes.equals("junio") || mes.equals("septiembre") || mes.equals("noviembre")) {
-            numeroDeDias = 30;
+            numerodias = 30;
         } else if (mes.equals("febrero")) {
-            if (esBisiesto) {
-                numeroDeDias = 29;
+            if (bisiesto) {
+                numerodias = 29;
             } else {
-                numeroDeDias = 28;
+                numerodias = 28;
             }
         } else {
             System.out.println("Nombre de mes no válido.");
+            input.close();
             return;
         }
 
-        System.out.println("El mes de " + mes + " tiene " + numeroDeDias + " días.");
+        System.out.println("El mes de " + mes + " tiene " + numerodias + " días.");
 
-        scanner.close();
+        input.close();
     }
 }

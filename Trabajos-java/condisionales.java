@@ -21,9 +21,9 @@ public class condisionales {
 
         input.close();
         /*
-         * ejecutar en la terminal de manera manual con los 
-         * comandos "java -cp (inserte el nombre de la clase
-         * precedida del nombre de la carpeta)" de manera que el
+         * ejecutar en la terminal de manera manual con los
+         * comandos de manera que no sea necesario usar el
+         * debugger para que el
          * scanner funcione correctamente.
          */
     }
