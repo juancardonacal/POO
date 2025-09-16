@@ -25,4 +25,14 @@ public class Persona {
                 + " Peso: " + peso + "]";
     }
 
+    // Metodos Getters y Setters
+    public String getNombre() { // Obtener el nombre
+        return nombre;
+     }
+
+    public void setNombre(String nombre) { // modificar el nombre
+        this.nombre = nombre;
+     }
+    
+
 }
