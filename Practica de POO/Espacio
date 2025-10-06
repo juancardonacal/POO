@@ -13,3 +13,95 @@ la palabra que sigue iría en MAYUSCULA.
          * Crear el metodo calcularIMC que retorne el indice de masa corporal (IMC) de la persona
          * IMC = peso (kg) / (altura (m) * altura (m))
          * Mostrar por pantalla los resultados de los nuevos metodos
+
+Notas 5 de octubre de 2025:
+- El uso del scanner en java es importante porque es la unica manera
+de utilizar un input como en otros lenguajes de programacion mas 
+faciles *COF *COF (python jsjsjs). Teniendo en cuenta que javagod
+es para progracion paradigmatica (o programacion orientado a objetos, para los panas POO) de manera que es necesario valerse de este recurso
+para pedir datos por consola.
+
+De esta forma:
+import java.util.Scanner; // Importa la clase Scanner
+
+public class EntradaSalida {
+    public static void main(String[] args) {
+        // 1. Crear un objeto Scanner para leer desde la consola (a mi me gusta
+        //usar "input":3)
+        Scanner input = new Scanner(System.in);
+
+        // 2. Pedir datos al usuario y leerlos
+        System.out.println("Introduce tu nombre:");
+        String nombre = input.nextLine(); // Lee el nombre como una cadena de texto
+
+        System.out.println("Introduce tu edad:");
+        int edad = input.nextInt(); // Lee la edad como un número entero
+
+        // 3. Mostrar los datos en la consola
+        System.out.println("Hola, " + nombre + "!"); // Muestra el nombre ingresado
+        System.out.println("Tienes " + edad + " años."); // Muestra la edad ingresada
+
+        // 4. Cierra el Scanner al terminar para liberar recursos
+        input.close();
+    }
+}
+
+- Esto me lo pidieron para una tarea, el uso de un menú:
+IMPORTANTE: Es necesario utilizar el scanner anteriormente mostrado para que funcione
+(almenos hasta donde me acuerdo) teniendo en cuenta que el switch se puede usar para 
+pedir los valores a mostrar como un condicional desde el codigo, pero para hacer interactivo
+el menú es mejor pedir los datos por consola. DOBLE NOTA: La primera vez que lo usé me presentó
+problemas para ejecutarse en la consola por lo que mostraré como ejecutarlo en la terminal
+de manera manual (linea 100).
+
+Estructura dada por la ia:
+
+import java.util.Scanner;
+
+public class MenuConsola {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int opcion;
+        boolean salir = false;
+
+        while (!salir) {
+            System.out.println("\n--- Menú de Opciones ---");
+            System.out.println("1. Opción Uno");
+            System.out.println("2. Opción Dos");
+            System.out.println("3. Salir");
+            System.out.print("Seleccione una opción: ");
+
+            opcion = scanner.nextInt();
+
+            switch (opcion) {
+                case 1:
+                    System.out.println("Ejecutando Opción Uno...");
+                    // Código para la Opción Uno
+                    break;
+                case 2:
+                    System.out.println("Ejecutando Opción Dos...");
+                    // Código para la Opción Dos
+                    break;
+                case 3:
+                    salir = true;
+                    System.out.println("Saliendo del programa...");
+                    break;
+                default:
+                    System.out.println("Opción no válida. Inténtelo de nuevo.");
+            }
+        }
+        scanner.close();
+    }
+}
+
+Esto lo cuadramos a nuestro antojo según las necesidades, de manera que no se va a quedar así.
+
+NOTA DEL ARREGLO DEL SCANNER:
+
+copian el dominio (por decirlo de alguno forma, la real no me acuerdo) 
+del codigo en la terminal, utilizando "cd" para llamarlo, convocarlo
+invocarlo, ejecutarlo, o la manera terminada en "arlo" que prefieran.
+
+![alt text](image-1.png)
+
