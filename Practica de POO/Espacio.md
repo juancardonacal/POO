@@ -13,12 +13,13 @@ la palabra que sigue iría en MAYUSCULA.
          * Crear el metodo calcularIMC que retorne el indice de masa corporal (IMC) de la persona
          * IMC = peso (kg) / (altura (m) * altura (m))
          * Mostrar por pantalla los resultados de los nuevos metodos
-
+*/
 Notas 5 de octubre de 2025:
 - El uso del scanner en java es importante porque es la unica manera
 de utilizar un input como en otros lenguajes de programacion mas 
 faciles *COF *COF (python jsjsjs). Teniendo en cuenta que javagod
-es para progracion paradigmatica (o programacion orientado a objetos, para los panas POO) de manera que es necesario valerse de este recurso
+es para progracion paradigmatica (o programacion orientado a objetos, 
+para los panas POO) de manera que es necesario valerse de este recurso
 para pedir datos por consola.
 
 De esta forma:
@@ -103,5 +104,4 @@ copian el dominio (por decirlo de alguno forma, la real no me acuerdo)
 del codigo en la terminal, utilizando "cd" para llamarlo, convocarlo
 invocarlo, ejecutarlo, o la manera terminada en "arlo" que prefieran.
 
-![alt text](image-1.png)
-
+![alt text](image-3.png)

@@ -12,7 +12,8 @@ public class MenuOpcionesSeguro {
             System.out.println("2. Restar dos números");
             System.out.println("3. Multiplicar dos números");
             System.out.println("4. Dividir dos números");
-            System.out.println("5. Salir");
+            System.out.println("5. Dividir dos números");
+            System.out.println("6. Salir");
             System.out.print("Elige una opción: ");
 
             // Validar que el usuario ingrese un número
@@ -21,18 +22,21 @@ public class MenuOpcionesSeguro {
 
                 switch (opcion) {
                     case 1:
-                        operar(sc, "suma");
+                        operar(sc, "al cuadrado");
                         break;
                     case 2:
-                        operar(sc, "resta");
+                        operar(sc, "raiz cuadrada");
                         break;
                     case 3:
-                        operar(sc, "multiplicación");
+                        operar(sc, "sacar mitad");
                         break;
                     case 4:
-                        operar(sc, "división");
+                        operar(sc, "logaritmo base 10");
                         break;
                     case 5:
+                        operar(sc, "al cubo");
+                        break;
+                    case 6:
                         System.out.println("Saliendo del programa...");
                         salir = true;
                         break;
@@ -41,7 +45,7 @@ public class MenuOpcionesSeguro {
                 }
             } else {
                 // Si no es un número, mostrar mensaje y limpiar la entrada
-                System.out.println("⚠️ Entrada inválida. Debes ingresar un número.");
+                System.out.println("Entrada inválida. Debes ingresar un número.");
                 sc.next(); // descarta la entrada no numérica
             }
 
@@ -50,3 +54,4 @@ public class MenuOpcionesSeguro {
 
         sc.close();
     }
+}
