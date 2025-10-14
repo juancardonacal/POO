@@ -1,8 +1,8 @@
 public class Banco {
     public static void main ( String [] args ) {
-        // Creacion del primer objeto ( Instancia )
+        // Creacion del primer objeto ( encapsulamiento )
         System.out.println (" --- Creando cuenta bancaria ---");
-        cuentaBancaria cuenta1 = new cuentaBancaria("Juan Perez", "1234567", 100.0);
+        cuentaBancaria cuenta1 = new cuentaBancaria("Willington Carabali", "1234567", 100.0);
         // Uso del toString () y un getter
         System.out.println (" Datos iniciales : Titular: " + cuenta1.getTitular() + ", Numero de Cuenta: " + cuenta1.getNumeroCuenta() + ", Saldo: " + cuenta1.getSaldo());
         
@@ -15,11 +15,16 @@ public class Banco {
 
         // Creacion de un segundo objeto
         System.out.println ("\n--- Creando segunda cuenta bancaria ---") ;
-        cuentaBancaria cuenta2 = new cuentaBancaria("Maria Lopez", "7654321", 200.0);
+        cuentaBancaria cuenta2 = new cuentaBancaria("Marcela Rodrigues", "54321", 200.0);
         System.out.println (" Datos iniciales : Titular: " + cuenta2.getTitular() + ", Numero de Cuenta: " + cuenta2.getNumeroCuenta() + ", Saldo: " + cuenta2.getSaldo());
-        cuenta2.depositar(100.0);  
-        
-        cuenta2.retirar(351.0);
+
+        // Comprobando el limite de sobregiro
+        cuenta1.retirar(150.0);
+
+
+        // Verificar estado final solo con toString ()
+        System.out.println (" Estado final cuenta 1 : " + cuenta1.toString());
+        System.out.println (" Estado final cuenta 2 : " + cuenta2.toString());
 
     }
 }

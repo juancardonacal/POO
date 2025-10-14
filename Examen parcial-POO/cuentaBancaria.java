@@ -66,4 +66,10 @@ class cuentaBancaria {
             System.out.println("Monto de retiro invalido o saldo insuficiente.");
         }
     }
+    @Override
+    public String toString() {
+        return "Titular: " + titular +
+         ", Numero de Cuenta: " + numeroCuenta + 
+         ", Saldo: " + saldo;
+    }
 }
