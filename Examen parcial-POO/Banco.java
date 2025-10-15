@@ -19,7 +19,7 @@ public class Banco {
         System.out.println (" Datos iniciales : Titular: " + cuenta2.getTitular() + ", Numero de Cuenta: " + cuenta2.getNumeroCuenta() + ", Saldo: " + cuenta2.getSaldo());
 
         // Comprobando el limite de sobregiro
-        cuenta1.retirar(151.0);
+        cuenta1.retirar(201.0);
         
 
         // Verificar estado final solo con toString ()
