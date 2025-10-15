@@ -10,21 +10,26 @@ class cuentaBancaria {
         this.saldo = 0.0;
     }
 
-    public cuentaBancaria(String titular, String numeroCuenta, double saldo) {
-        if (numeroCuenta.length() <= 6) {
-            throw new IllegalArgumentException("El número de cuenta debe tener mas de 6 caracteres.");
-        }
+        public cuentaBancaria(String titular, String numeroCuenta, double saldo) {
+            if (numeroCuenta.length() < 6) {
+                System.out.println("El número de cuenta debe tener 6 o más caracteres.");
+                this.numeroCuenta = "0000000000";
+            } else {
+                this.numeroCuenta = numeroCuenta;
+            }
 
-        if (titular == null || titular.trim().isEmpty()) {
-            throw new IllegalArgumentException("El nombre del titular no puede estar vacío.");
-        }
-        if (saldo < -50) {
-            throw new IllegalArgumentException("El saldo no puede ser menor a -50.");
-        }
-
-        this.titular = titular;
-        this.numeroCuenta = numeroCuenta;
-        this.saldo = saldo;
+            if (titular == null || titular.trim().isEmpty()) {
+                System.out.println("El nombre del titular no puede estar vacío.");
+                this.titular = "Desconocido";
+            } else {
+                this.titular = titular;
+            }
+            if (saldo < -50) {
+                System.out.println("El saldo no puede ser menor a -50.");
+                this.saldo = 0.0;
+            } else {
+                this.saldo = saldo;
+            }
     }
 
     public String getTitular() {
