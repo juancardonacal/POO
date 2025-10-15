@@ -1,4 +1,4 @@
-class producto {
+class Producto {
 
     private String codigo;
     private String descripcion;
@@ -6,7 +6,7 @@ class producto {
     private double precioUnitario;
 
     // Constructor por defecto
-    public producto() {
+    public Producto() {
         this.codigo = "0000";
         this.descripcion = "Sin descripcion";
         this.cantidad = 0;
@@ -14,7 +14,7 @@ class producto {
     }
 
     // Constructor con parametros
-    public producto(String codigo, String descripcion, int cantidad, double precioUnitario) {
+    public Producto(String codigo, String descripcion, int cantidad, double precioUnitario) {
         if (codigo == null || codigo.trim().isEmpty()) {
             System.out.println("El código no puede estar vacío.");
             this.codigo = "0000";
@@ -36,8 +36,8 @@ class producto {
             this.cantidad = cantidad;
         }
 
-        if (precio < 0) {
-            System.out.println("El precio no puede ser negativo.");
+        if (precioUnitario < 0) {
+            System.out.println("El precio unitario no puede ser negativo.");
             this.precioUnitario = 0.0;
         } else {
             this.precioUnitario = precioUnitario;
@@ -84,7 +84,7 @@ public double aplicarDescuento(double porcentaje) {
         System.out.println("Porcentaje de descuento invalido.");
         return calcularSubtotal();
     }
-    return calcularSubtotal() * (1 - porcentaje / 50.0);
+    return calcularSubtotal() * (1 - porcentaje / 100.0);
 }
     public void incrementarCantidad(int cantidad) {
         if (cantidad < 0) {

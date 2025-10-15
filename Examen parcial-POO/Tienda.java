@@ -14,7 +14,7 @@ public class Tienda {
         System.out.println("Subtotal de " + producto2.getDescripcion() + ": $" + producto2.calcularSubtotal());
 
         // Aplicar descuento
-        double descuento1 = producto1.aplicarDescuento(10); // 10% de descuento
+        double descuento1 = producto1.aplicarDescuento(8); // 8% de descuento
         double descuento2 = producto2.aplicarDescuento(5);  // 5% de descuento
         System.out.println("Subtotal con descuento de " + producto1.getDescripcion() + ": $" + descuento1);
         System.out.println("Subtotal con descuento de " + producto2.getDescripcion() + ": $" + descuento2);
