@@ -5,9 +5,9 @@ public class Banco {
         cuentaBancaria cuenta1 = new cuentaBancaria("Willington Carabali", "1234567", 100.0);
         // Uso del toString () y un getter
         System.out.println (" Datos iniciales : Titular: " + cuenta1.getTitular() + ", Numero de Cuenta: " + cuenta1.getNumeroCuenta() + ", Saldo: " + cuenta1.getSaldo());
-        
-        // Uso de un setter y un metodo de negocio
-        cuenta1.setTitular("Juan P. Gomez");
+
+        // Uso de un setter y un metodo del banco
+        cuenta1.setTitular("Willington C.");
         cuenta1.depositar(50.0);
         
         // Verificar estado con toString ()
