@@ -6,6 +6,6 @@ public class EjecutarHerencia {
         Animal ceniza = new gato();
 
         lucas.hacerSonido(); //Salida: el valor del metodo hacer sonido de la clase perro
-        ceniza.hacerSonido();
+        ceniza.hacerSonido(); 
     }
 }
